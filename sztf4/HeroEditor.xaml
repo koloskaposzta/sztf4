@@ -4,21 +4,17 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:sztf4"
+        xmlns:vms="clr-namespace:sztf4.ViewModels"
         mc:Ignorable="d"
         Title="HeroEditor" Height="419" Width="335">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="1*" ></RowDefinition>
-            <RowDefinition Height="1*"></RowDefinition>
-            <RowDefinition Height="1*"></RowDefinition>
-            <RowDefinition Height="1*"></RowDefinition>
-            <RowDefinition Height="1*"></RowDefinition>
-            <RowDefinition Height="1*"></RowDefinition>
-            <RowDefinition Height="1*"></RowDefinition>
-        </Grid.RowDefinitions>
-        <Label Grid.Row="0" FontSize="24" >Strength</Label>
-        <Label Grid.Row="2" FontSize="24">Speed</Label>
-        <Label Grid.Row="4" FontSize="24">Role</Label>
+    <StackPanel>
+ 
+        <Label Padding="10" FontSize="24" >Strength</Label>
+        <TextBox Padding="10" Text="{Binding Actual.Strength}"></TextBox>
+        <Label  FontSize="24" Padding="10">Speed</Label>
+        <TextBox Text="{Binding Actual.Strength}" Padding="10"></TextBox>
+        <Label  FontSize="24" Padding="10">Role</Label>
+        <ComboBox></ComboBox>
         
-    </Grid>
+    </StackPanel>
 </Window>
