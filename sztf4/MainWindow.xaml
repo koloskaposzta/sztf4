@@ -6,7 +6,24 @@
         xmlns:local="clr-namespace:sztf4"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid x:Name="myGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="balbox" Grid.Column="0" VerticalAlignment="Stretch">
+            
 
+        </ListBox>
+        <StackPanel x:Name="stackPanel" Grid.Column="1">
+            <Label Content="Cost: " VerticalAlignment="Center" />
+            <Button x:Name="heroAddtolist" Content="Add to my heroes" />
+            <Button x:Name="newHero" Content="Make new hero" />
+
+        </StackPanel>
+        <ListBox x:Name="jobbbox" Grid.Column="2">
+            
+        </ListBox>
     </Grid>
 </Window>
