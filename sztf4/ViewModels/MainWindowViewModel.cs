@@ -20,9 +20,13 @@ namespace sztf4.ViewModels
 
         public BindingList<SuperHero> superHeroes { get; set; }
         public BindingList<SuperHero> selectedSuperHeroes;
-        public SuperHero selectedHero;
+        private SuperHero selectedHero;
 
-        
+        public SuperHero SelectedHero
+        {
+            get { return selectedHero; }
+            set { selectedHero = value; }
+        }
 
 
         public MainWindowViewModel()
@@ -33,7 +37,14 @@ namespace sztf4.ViewModels
             superHeroes.Add(new SuperHero(){ Name = "SuperMan", Speed = 8, Strength = 8, Role = Role.Good });
             superHeroes.Add(new SuperHero() { Name = "BatMan", Speed = 4, Strength = 10, Role = Role.Neutral });
         }
-
+        public void AddToHeroes()
+        {
+            if (selectedHero != null)
+            {
+                selectedSuperHeroes.Add(selectedHero.Masol());
+                
+            }
+        }
 
 
 

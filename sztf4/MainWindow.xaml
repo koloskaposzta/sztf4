@@ -17,16 +17,16 @@
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="2*" />
         </Grid.ColumnDefinitions>
-        <ListBox x:Name="balbox" Grid.Column="0" ItemsSource="{Binding superHeroes}" SelectedItem="{Binding selectedHero}" HorizontalAlignment="Stretch">
+        <ListBox x:Name="balbox" Grid.Column="0" ItemsSource="{Binding superHeroes}" SelectedItem="{Binding SelectedHero}" HorizontalAlignment="Stretch">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
                         <Label Content="{Binding Name}" />
                         <Grid x:Name="kisgrid">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="1*" />
-                                <ColumnDefinition Width="1*" />
-                                <ColumnDefinition Width="1*" />
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="2*" />
                             </Grid.ColumnDefinitions>
                             <ProgressBar Maximum="10" Value="{Binding Speed}" Height="10" Grid.Column="0" Margin="10"/>
                             <ProgressBar Maximum="10" Value="{Binding Strength}" Height="10" Grid.Column="1" Margin="10"/>
@@ -35,11 +35,10 @@
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
-
         </ListBox>
         <StackPanel x:Name="stackPanel" Grid.Column="1">
             <Label Content="Cost: " VerticalAlignment="Center" Margin="20" />
-            <Button x:Name="heroAddtolist" Content="Add to my heroes" Margin="20" />
+            <Button x:Name="heroAddtolist" Content="Add to my heroes" Margin="20" Click="heroAddtolist_Click" />
             <Button x:Name="newHero" Content="Make new hero" Margin="20" />
             <Button x:Name="editHero" Content="Edit a hero" Click="editHero_Click" Margin="20"/>
             <Label Content="AVG ero: " Margin="10" />
@@ -48,7 +47,7 @@
             <ProgressBar x:Name="AVGgyorsasag" Height="10"/>
 
         </StackPanel>
-        <ListBox x:Name="jobbbox" Grid.Column="2">
+        <ListBox x:Name="jobbbox" Grid.Column="2" ItemsSource="{Binding selectedSuperHeroes}">
             
         </ListBox>
     </Grid>

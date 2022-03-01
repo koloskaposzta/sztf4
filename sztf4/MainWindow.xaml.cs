@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using sztf4.ViewModels;
 
 namespace sztf4
 {
@@ -29,6 +30,11 @@ namespace sztf4
         {
             HeroEditor he = new HeroEditor();
             he.ShowDialog();
+        }
+
+        private void heroAddtolist_Click(object sender, RoutedEventArgs e)
+        {
+            (this.DataContext as MainWindowViewModel).AddToHeroes();
         }
     }
 

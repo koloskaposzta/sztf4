@@ -14,6 +14,16 @@ namespace sztf4.Model
 
         public Role Role { get; set; }
         
-        
+        public SuperHero Masol()
+        {
+            return new SuperHero()
+            {
+                Name = this.Name,
+                Strength = this.Strength,
+                Speed = this.Speed,
+                Role = this.Role
+                
+            };
+        }
     }
 }
