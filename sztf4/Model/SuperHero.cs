@@ -13,5 +13,7 @@ namespace sztf4.Model
         public int Speed { get; set; }
 
         public Role Role { get; set; }
+        
+        
     }
 }
