@@ -24,7 +24,7 @@ namespace sztf4
         public HeroEditor()
         {
             InitializeComponent();
-            var s = new SuperHero() { Name = "Dummy", Role = Role.Neutral, Speed = 5, Strength = 5 };
+            var s = new SuperHero() { Name = "Dummy", Role = Role.Neutral, Speed = 1, Strength = 10 };
 
             var vm = new HeroEditorViewModel();
             vm.Setup(s);

@@ -12,9 +12,9 @@
         <Label Padding="10" FontSize="24" >Strength</Label>
         <TextBox Padding="10" Text="{Binding Actual.Strength}"></TextBox>
         <Label  FontSize="24" Padding="10">Speed</Label>
-        <TextBox Text="{Binding Actual.Strength}" Padding="10"></TextBox>
+        <TextBox Text="{Binding Actual.Speed}" Padding="10"></TextBox>
         <Label  FontSize="24" Padding="10">Role</Label>
-        <ComboBox></ComboBox>
+        <ComboBox ItemsSource="{Binding Roles}" SelectedItem="{Binding ActualRole}" ></ComboBox>
         
     </StackPanel>
 </Window>

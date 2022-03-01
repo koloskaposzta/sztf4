@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace sztf4.Model
 {
- public   enum Role
+    public enum Role
     {
-        Good,Neutral,Bad
+        Neutral, Good, Bad
     }
 }

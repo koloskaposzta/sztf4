@@ -10,10 +10,11 @@ namespace sztf4.ViewModels
     public class HeroEditorViewModel
     {
         public SuperHero   Actual { get; set; }
-
+        public List<string> Roles { get; set; }
         public HeroEditorViewModel(SuperHero actual)
         {
             Actual = actual;
+            this.Roles = Enum.GetNames(typeof(Role)).ToList();
         }
 
         public HeroEditorViewModel()
