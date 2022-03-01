@@ -24,5 +24,13 @@ namespace sztf4
         {
             InitializeComponent();
         }
+
+        private void editHero_Click(object sender, RoutedEventArgs e)
+        {
+            HeroEditor he = new HeroEditor();
+            he.ShowDialog();
+        }
     }
+
+    
 }

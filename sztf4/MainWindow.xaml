@@ -20,7 +20,7 @@
             <Label Content="Cost: " VerticalAlignment="Center" />
             <Button x:Name="heroAddtolist" Content="Add to my heroes" />
             <Button x:Name="newHero" Content="Make new hero" />
-
+            <Button x:Name="editHero" Content="Edit a hero" Click="editHero_Click" />
         </StackPanel>
         <ListBox x:Name="jobbbox" Grid.Column="2">
             
