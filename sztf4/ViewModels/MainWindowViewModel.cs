@@ -18,9 +18,11 @@ namespace sztf4.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(s));
         }
 
-        public BindingList<SuperHero> superHeroes;
+        public BindingList<SuperHero> superHeroes { get; set; }
         public BindingList<SuperHero> selectedSuperHeroes;
         public SuperHero selectedHero;
+
+        
 
 
         public MainWindowViewModel()
@@ -28,7 +30,8 @@ namespace sztf4.ViewModels
             superHeroes = new BindingList<SuperHero>();
             selectedSuperHeroes = new BindingList<SuperHero>();
 
-            superHeroes.Add(new SuperHero(){ Name = "SuperMan", Speed = 8, Strength = 8, Role = 0 }); 
+            superHeroes.Add(new SuperHero(){ Name = "SuperMan", Speed = 8, Strength = 8, Role = Role.Good });
+            superHeroes.Add(new SuperHero() { Name = "BatMan", Speed = 4, Strength = 10, Role = Role.Neutral });
         }
 
 
