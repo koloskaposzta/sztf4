@@ -17,10 +17,15 @@
 
         </ListBox>
         <StackPanel x:Name="stackPanel" Grid.Column="1">
-            <Label Content="Cost: " VerticalAlignment="Center" />
-            <Button x:Name="heroAddtolist" Content="Add to my heroes" />
-            <Button x:Name="newHero" Content="Make new hero" />
-            <Button x:Name="editHero" Content="Edit a hero" Click="editHero_Click" />
+            <Label Content="Cost: " VerticalAlignment="Center" Margin="20" />
+            <Button x:Name="heroAddtolist" Content="Add to my heroes" Margin="20" />
+            <Button x:Name="newHero" Content="Make new hero" Margin="20" />
+            <Button x:Name="editHero" Content="Edit a hero" Click="editHero_Click" Margin="20"/>
+            <Label Content="AVG ero: " Margin="10" />
+            <ProgressBar x:Name="AVGero" Height="10"/>
+            <Label Content="AVG gyorsasag:" Margin="10" />
+            <ProgressBar x:Name="AVGgyorsasag" Height="10"/>
+
         </StackPanel>
         <ListBox x:Name="jobbbox" Grid.Column="2">
             
